@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindMap Quiz — Харитаи зеҳни дониш</title>
+<style>
+:root{--bg:#080d1b;--panel:#111a2e;--panel2:#17233b;--text:#eef4ff;--muted:#9caecc;--line:#283958;--cyan:#55e6e0;--purple:#9c83ff;--green:#43d99a;--yellow:#ffd166;--red:#ff6f91}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 10% 0%,#17224a 0,transparent 32%),radial-gradient(circle at 95% 20%,#1b3150 0,transparent 30%),var(--bg);color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif;min-height:100vh}
+button{font:inherit;cursor:pointer;border:0}.wrap{max-width:1180px;margin:auto;padding:24px 20px 44px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:25px}.brand{display:flex;gap:12px;align-items:center}.logo{width:48px;height:48px;border-radius:15px;background:linear-gradient(135deg,var(--cyan),var(--purple));display:grid;place-items:center;color:#07101e;font-size:24px;font-weight:900;box-shadow:0 8px 30px #55e6e033}.brand h1{font-size:20px;margin:0}.brand p{margin:4px 0 0;color:var(--muted);font-size:12px}.offline{font-size:12px;color:var(--green);border:1px solid #245e51;background:#0c2829;padding:9px 12px;border-radius:999px;white-space:nowrap}.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;margin-bottom:18px}.panel{background:linear-gradient(145deg,#121d34f5,#0e172af5);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 18px 55px #0002}.eyebrow{color:var(--cyan);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:800}.hero h2{font-size:clamp(27px,4vw,43px);line-height:1.1;margin:12px 0}.hero h2 span{color:var(--cyan)}.hero p{color:var(--muted);line-height:1.65;margin:0;max-width:680px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}.stat{padding:12px;background:#0b1427;border:1px solid #233350;border-radius:14px}.stat strong{display:block;font-size:23px}.stat small{color:var(--muted);font-size:11px}.score-panel{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}.ring{width:126px;height:126px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--cyan) 0deg,#26334f 0deg);position:relative;margin:7px 0 12px}.ring:before{content:"";position:absolute;inset:9px;border-radius:50%;background:#101a2f}.ring div{position:relative}.ring strong{font-size:29px;display:block}.ring small{font-size:10px;color:var(--muted)}.score-panel h3{margin:3px 0 6px}.score-panel p{font-size:12px;color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:1.08fr .92fr;gap:18px}.section-title{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px}.section-title h3{margin:0;font-size:17px}.pill{font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:6px 9px}.mapbox{background:#0a1326;border:1px solid #243452;border-radius:17px;overflow:hidden;min-height:335px;position:relative}.mapbox svg{display:block;width:100%;height:335px}.maplegend{display:flex;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:11px;margin-top:13px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}.quiz-top{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-bottom:10px}.progress{height:6px;background:#25324c;border-radius:9px;overflow:hidden;margin-bottom:19px}.progress div{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--purple));transition:width .3s}.topic{font-size:11px;color:var(--cyan);font-weight:800;letter-spacing:1px;text-transform:uppercase}.question{font-size:20px;line-height:1.4;margin:10px 0 18px}.answers{display:grid;gap:9px}.answer{background:#14213a;border:1px solid #2a3b5b;border-radius:12px;padding:13px 14px;text-align:left;color:var(--text);transition:.18s;display:flex;align-items:center;gap:11px}.answer:hover:not(:disabled){border-color:var(--cyan);transform:translateY(-1px);background:#192a47}.letter{width:28px;height:28px;display:grid;place-items:center;background:#233451;border-radius:8px;font-size:12px;font-weight:800;flex-shrink:0}.answer.correct{border-color:var(--green);background:#10352f}.answer.wrong{border-color:var(--red);background:#3b1c30}.answer:disabled{cursor:default}.feedback{display:none;margin-top:13px;padding:12px;border-radius:12px;background:#0c2930;border:1px solid #20504d;color:#c9fff0;font-size:13px;line-height:1.5}.feedback.show{display:block}.actions{display:flex;gap:9px;margin-top:15px}.btn{padding:11px 15px;border-radius:11px;font-weight:800;font-size:13px}.primary{background:linear-gradient(100deg,var(--cyan),#8ff0ca);color:#081421}.secondary{background:#1a2944;border:1px solid #334565;color:var(--text)}.btn:disabled{opacity:.35;cursor:not-allowed}.recommend{margin-top:18px;background:linear-gradient(120deg,#1c2145,#12283a);border:1px solid #3c4774;border-radius:18px;padding:18px}.recommend h3{margin:0 0 8px;font-size:16px}.recommend p{color:#c1cce4;line-height:1.55;font-size:13px;margin:0}.rec-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.tag{background:#253252;border:1px solid #3a4a70;color:#dce8ff;border-radius:99px;padding:6px 9px;font-size:11px}.bottom{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}.topic-row{display:grid;grid-template-columns:105px 1fr 40px;gap:10px;align-items:center;margin:13px 0;font-size:12px}.topic-row span:first-child{color:#dce6fa}.bar{height:8px;background:#26334e;border-radius:8px;overflow:hidden}.bar i{display:block;height:100%;border-radius:8px;background:linear-gradient(90deg,var(--purple),var(--cyan));width:0;transition:width .4s}.topic-row b{text-align:right;color:var(--muted);font-size:11px}.note{color:var(--muted);font-size:12px;line-height:1.6}.foot{text-align:center;color:#7485a7;font-size:11px;margin-top:24px}.modal{display:none;position:fixed;inset:0;background:#030713d9;z-index:5;place-items:center;padding:20px}.modal.show{display:grid}.modal-card{max-width:540px;width:100%;background:#121d34;border:1px solid #3a4b6b;border-radius:22px;padding:25px}.modal-card h2{margin:0 0 8px}.modal-card p{color:var(--muted);line-height:1.6}.modal-card .actions{flex-wrap:wrap}
+@media(max-width:850px){.hero,.grid,.bottom{grid-template-columns:1fr}.score-panel{min-height:225px}.mapbox svg{height:300px}}@media(max-width:520px){.wrap{padding:15px 12px 30px}.top{align-items:flex-start}.brand h1{font-size:17px}.offline{font-size:10px;padding:8px}.panel{padding:16px}.stats{gap:6px}.stat{padding:9px}.stat strong{font-size:19px}.question{font-size:18px}.topic-row{grid-template-columns:85px 1fr 30px}.mapbox svg{height:280px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand"><div class="logo">M</div><div><h1>MindMap Quiz</h1><p>Харитаи зеҳни дониш · версияи офлайн</p></div></div>
+  <div class="offline">● ОФЛАЙН · БЕ API</div>
+</header>
+<section class="hero">
+  <div class="panel">
+    <div class="eyebrow">Омӯзиши оқилона</div>
+    <h2>Холи ту нест — <span>харитаи дониши ту.</span></h2>
+    <p>Ба саволҳои информатика ҷавоб деҳ. MindMap Quiz мавзӯъҳои қавӣ ва мавзӯъҳои ниёзманди такрорро аз рӯйи ҷавобҳоят нишон медиҳад ва нақшаи омӯзиш месозад.</p>
+    <div class="stats">
+      <div class="stat"><strong id="statAnswered">0/10</strong><small>Саволҳо</small></div>
+      <div class="stat"><strong id="statCorrect">0</strong><small>Ҷавобҳои дуруст</small></div>
+      <div class="stat"><strong id="statTopics">0/4</strong><small>Мавзӯъҳои санҷидашуда</small></div>
+    </div>
+  </div>
+  <div class="panel score-panel">
+    <div class="eyebrow">Натиҷаи зинда</div>
+    <div class="ring" id="scoreRing"><div><strong id="scoreNum">0%</strong><small>ДУРУСТ</small></div></div>
+    <h3 id="scoreTitle">Оғоз кун!</h3>
+    <p id="scoreText">Ҳар ҷавоб харитаи дониши туро равшантар мекунад.</p>
+  </div>
+</section>
+<section class="grid">
+  <div class="panel">
+    <div class="section-title"><h3>🧠 Харитаи зеҳни дониш</h3><span class="pill">ТАЪСИРИ ҶАВОБҲО</span></div>
+    <div class="mapbox">
+      <svg id="mindmap" viewBox="0 0 600 335" role="img" aria-label="Харитаи мавзӯъҳои дониш">
+        <defs><filter id="glow"><feGaussianBlur stdDeviation="3.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+        <g stroke="#2a3d60" stroke-width="2" fill="none">
+          <path d="M300 166 L150 83"/><path d="M300 166 L450 83"/><path d="M300 166 L150 255"/><path d="M300 166 L450 255"/>
+        </g>
+        <g id="node-html" transform="translate(150 83)"><circle r="43" fill="#162642" stroke="#526987" stroke-width="2"/><circle r="35" fill="none" stroke="#526987" stroke-dasharray="3 5"/><text y="-3" text-anchor="middle" fill="#eef4ff" font-size="14" font-weight="700">HTML/CSS</text><text class="pct" y="15" text-anchor="middle" fill="#9caecc" font-size="11">Интизор</text></g>
+        <g id="node-js" transform="translate(450 83)"><circle r="43" fill="#162642" stroke="#526987" stroke-width="2"/><circle r="35" fill="none" stroke="#526987" stroke-dasharray="3 5"/><text y="-3" text-anchor="middle" fill="#eef4ff" font-size="14" font-weight="700">JavaScript</text><text class="pct" y="15" text-anchor="middle" fill="#9caecc" font-size="11">Интизор</text></g>
+        <g id="node-algo" transform="translate(150 255)"><circle r="43" fill="#162642" stroke="#526987" stroke-width="2"/><circle r="35" fill="none" stroke="#526987" stroke-dasharray="3 5"/><text y="-3" text-anchor="middle" fill="#eef4ff" font-size="14" font-weight="700">Алгоритм</text><text class="pct" y="15" text-anchor="middle" fill="#9caecc" font-size="11">Интизор</text></g>
+        <g id="node-cyber" transform="translate(450 255)"><circle r="43" fill="#162642" stroke="#526987" stroke-width="2"/><circle r="35" fill="none" stroke="#526987" stroke-dasharray="3 5"/><text y="-3" text-anchor="middle" fill="#eef4ff" font-size="14" font-weight="700">Киберамният</text><text class="pct" y="15" text-anchor="middle" fill="#9caecc" font-size="11">Интизор</text></g>
+        <g id="node-core" transform="translate(300 166)" filter="url(#glow)"><circle r="49" fill="#122b42" stroke="#55e6e0" stroke-width="2.5"/><circle r="39" fill="none" stroke="#55e6e0" stroke-opacity=".5"/><text y="-3" text-anchor="middle" fill="#55e6e0" font-size="12" font-weight="800">ДОНИШ</text><text id="mapCore" y="15" text-anchor="middle" fill="#eef4ff" font-size="11">0%</text></g>
+      </svg>
+    </div>
+    <div class="maplegend"><span><i class="dot" style="background:#43d99a"></i>Қавӣ: 80–100%</span><span><i class="dot" style="background:#ffd166"></i>Такрор: 50–79%</span><span><i class="dot" style="background:#ff6f91"></i>Ниёз ба омӯзиш: 0–49%</span></div>
+  </div>
+  <div class="panel">
+    <div class="section-title"><h3>🎯 Санҷиши дониш</h3><span class="pill" id="qCount">САВОЛИ 1 АЗ 10</span></div>
+    <div class="quiz-top"><span id="qTopic">HTML/CSS</span><span id="qProgressText">10% роҳ</span></div>
+    <div class="progress"><div id="progressBar"></div></div>
+    <div class="question" id="question">HTML барои чӣ истифода мешавад?</div>
+    <div class="answers" id="answers"></div>
+    <div class="feedback" id="feedback"></div>
+    <div class="actions"><button class="btn primary" id="nextBtn" disabled>Саволи навбатӣ →</button><button class="btn secondary" id="resetBtn">Аз нав</button></div>
+  </div>
+</section>
+<section class="bottom">
+  <div class="panel">
+    <div class="section-title"><h3>📊 Профили мавзӯъҳо</h3><span class="pill">НАМОИШИ ЗИНДА</span></div>
+    <div id="topicBars"></div>
+    <p class="note">Фоизҳо аз ҷавобҳои ҳамин кӯшиш ҳисоб мешаванд. Агар мавзӯъ ҳанӯз савол надошта бошад, он ҳамчун «санҷида нашудааст» мемонад.</p>
+  </div>
+  <div class="panel">
+    <div class="section-title"><h3>💡 Нақшаи шахсии такрор</h3><span class="pill">ТАВСИЯҲО</span></div>
+    <div class="recommend"><h3 id="recTitle">Аввал тестро оғоз кун</h3><p id="recText">Пас аз чанд ҷавоб система мавзӯъеро, ки бештар ба такрор ниёз дорад, пешниҳод мекунад.</p><div class="rec-tags" id="recTags"><span class="tag">Таҳлил интизор аст</span></div></div>
+    <p class="note" style="margin-top:13px">Ин тавсияҳо аз қоидаҳои маҳаллии JavaScript сохта мешаванд; маълумот ба интернет фиристода намешавад.</p>
+  </div>
+</section>
+<div class="foot">MindMap Quiz · HTML + CSS + JavaScript · Бе интернет, бе API, бе насб</div>
+</div>
+<div class="modal" id="resultModal"><div class="modal-card"><div class="eyebrow">ҲИСОБОТИ ОМӮЗИШ</div><h2 id="finalTitle">Харитаи дониши ту тайёр аст!</h2><p id="finalText"></p><div id="finalSummary"></div><div class="actions"><button class="btn primary" id="modalRestart">Боз гузаштан</button><button class="btn secondary" id="closeModal">Харитаро дидан</button></div></div></div>
+<script>
+const questions = [
+ {topic:"HTML/CSS",key:"html",q:"HTML асосан барои чӣ истифода мешавад?",a:["Барои сохтани сохтори веб-саҳифа","Барои нигоҳ доштани паролҳо","Барои тез кардани интернет","Барои таҳрири акс"],correct:0,why:"HTML сохтори саҳифаро месозад: сарлавҳа, матн, тугма ва қисмҳои дигар."},
+ {topic:"Алгоритм",key:"algo",q:"Алгоритм чист?",a:["Номи як компютер","Қадамҳои пайдарпай барои ҳал кардани масъала","Танҳо забони барномасозӣ","Қисми монитор"],correct:1,why:"Алгоритм маҷмӯи қадамҳои равшан ва пайдарпай барои иҷрои вазифа мебошад."},
+ {topic:"JavaScript",key:"js",q:"Дар веб-саҳифа JavaScript бештар чӣ кор мекунад?",a:["Танҳо ранги қоғазро чоп мекунад","Компютерро аз барқ пур мекунад","Саҳифаро интерактивӣ мекунад","Ба ҷои браузер кор мекунад"],correct:2,why:"JavaScript амалҳои корбарро қабул мекунад ва рафтори саҳифаро идора мекунад."},
+ {topic:"Киберамният",key:"cyber",q:"Кадом парол бехатартар аст?",a:["123456","qwerty","номи худ","Tj!7mQ#29p"],correct:3,why:"Пароли дарозу омехта, ки тахмин карданаш душвор аст, одатан бехатартар мебошад."},
+ {topic:"HTML/CSS",key:"html",q:"CSS барои чӣ лозим аст?",a:["Барои ороиш ва ҷойгиркунии унсурҳои саҳифа","Барои ҳисоб кардани ҳарорати CPU","Барои сохтани шабакаи барқӣ","Барои иваз кардани системаи амалиётӣ"],correct:0,why:"CSS ранг, андоза, фосила ва тарҳи визуалии веб-саҳифаро идора мекунад."},
+ {topic:"Алгоритм",key:"algo",q:"Агар як қадам се маротиба такрор шавад, кадом сохтор мувофиқ аст?",a:["Сарлавҳа","Давр (цикл)","Ранг","Файл"],correct:1,why:"Давр имкон медиҳад, ки як амал чанд маротиба такрор шавад."},
+ {topic:"JavaScript",key:"js",q:"Тағйирёбанда дар барномасозӣ барои чӣ истифода мешавад?",a:["Барои нигоҳ доштани маълумот","Барои тоза кардани экран аз чанг","Барои сохтани клавиатура","Барои пайваст кардани интернет ҳатман"],correct:0,why:"Тағйирёбанда ҷойест барои нигоҳ доштани арзише, ки барнома истифода мебарад."},
+ {topic:"Киберамният",key:"cyber",q:"Паёми ношинос талаб мекунад, ки рамзи бонкиро фиристӣ. Чӣ кор мекунӣ?",a:["Рамзро фавран мефиристам","Паёмро ба ҳама мефиристам","Рамзро намефиристам ва манбаъро месанҷам","Ҳама пайвандҳоро мекушоям"],correct:2,why:"Рамзҳо ва маълумоти махфиро нафирист; манбаъро аз роҳи расмӣ санҷ."},
+ {topic:"Алгоритм",key:"algo",q:"Дар блок-схема ромб одатан чиро нишон медиҳад?",a:["Оғоз ё анҷом","Шарт ё қарор","Танҳо матн","Пайвасти интернет"],correct:1,why:"Ромб одатан нуқтаи қабули қарорро нишон медиҳад, масалан «ҳа/не»."},
+ {topic:"JavaScript",key:"js",q:"Чӣ тавр метавон санҷид, ки ду арзиш баробаранд?",a:["Бо оператори муқоиса, масалан ===","Бо тағйир додани ранги саҳифа","Бо хомӯш кардани браузер","Бо номи файл"],correct:0,why:"Дар JavaScript оператори === баробарии қатъиро месанҷад: арзиш ва навъи дода."}
+];
+const topicNames={html:"HTML/CSS",js:"JavaScript",algo:"Алгоритм",cyber:"Киберамният"};
+const nodeIds={html:"node-html",js:"node-js",algo:"node-algo",cyber:"node-cyber"};
+let index=0, answered=0, correct=0, locked=false, results=[], stats={html:{seen:0,correct:0},js:{seen:0,correct:0},algo:{seen:0,correct:0},cyber:{seen:0,correct:0}};
+const $=id=>document.getElementById(id);
+function shuffleAnswers(q){return q.a.map((text,i)=>({text,correct:i===q.correct}));}
+function renderQuestion(){
+ locked=false; const q=questions[index]; $("qCount").textContent=`САВОЛИ ${index+1} АЗ ${questions.length}`;
+ $("qTopic").textContent=q.topic;$("question").textContent=q.q;$("qProgressText").textContent=`${Math.round(index/questions.length*100)}% роҳ`;$("progressBar").style.width=(index/questions.length*100)+"%";
+ $("feedback").className="feedback";$("feedback").textContent="";$("nextBtn").disabled=true;$("nextBtn").textContent=index===questions.length-1?"Натиҷаро бин →":"Саволи навбатӣ →";
+ const box=$("answers");box.innerHTML="";
+ shuffleAnswers(q).forEach((ans,i)=>{const b=document.createElement("button");b.className="answer";b.innerHTML=`<span class="letter">${String.fromCharCode(65+i)}</span><span>${ans.text}</span>`;b.addEventListener("click",()=>choose(b,ans,q));box.appendChild(b);});
+}
+function choose(button,ans,q){
+ if(locked)return;locked=true;answered++;stats[q.key].seen++;const good=ans.correct;
+ if(good){correct++;stats[q.key].correct++;button.classList.add("correct");$("feedback").style.background="#0c2930";$("feedback").style.borderColor="#20504d";$("feedback").innerHTML="✓ <b>Офарин, ҷавоби дуруст!</b> "+q.why;}
+ else{button.classList.add("wrong");$("feedback").style.background="#321a2a";$("feedback").style.borderColor="#70314a";$("feedback").innerHTML="✦ <b>Ин дафъа не.</b> "+q.why;[...$("answers").children].forEach(b=>{if(b.children[1].textContent===q.a[q.correct])b.classList.add("correct")});}
+ [...$("answers").children].forEach(b=>b.disabled=true);$("feedback").classList.add("show");results.push({key:q.key,good});updateDashboard();$("nextBtn").disabled=false;
+}
+function pct(s){return s.seen?Math.round(s.correct/s.seen*100):null}
+function stateFor(p){if(p===null)return{label:"Интизор",color:"#526987"};if(p>=80)return{label:"Қавӣ",color:"#43d99a"};if(p>=50)return{label:"Такрор",color:"#ffd166"};return{label:"Омӯзиш",color:"#ff6f91"}}
+function updateDashboard(){
+ $("statAnswered").textContent=`${answered}/${questions.length}`;$("statCorrect").textContent=correct;
+ const tested=Object.values(stats).filter(s=>s.seen>0).length;$("statTopics").textContent=`${tested}/4`;
+ const score=answered?Math.round(correct/answered*100):0;$("scoreNum").textContent=score+"%";$("scoreRing").style.background=`conic-gradient(var(--cyan) ${score*3.6}deg,#26334f ${score*3.6}deg)`;$("mapCore").textContent=score+"%";
+ $("scoreTitle").textContent=!answered?"Оғоз кун!":score>=80?"Дониши қавӣ!":score>=50?"Пешрафт дорӣ":"Ҷойи рушд ҳаст";
+ $("scoreText").textContent=!answered?"Ҳар ҷавоб харитаи дониши туро равшантар мекунад.":`Аз ${answered} саволи ҷавобдодашуда ${correct} ҷавоби дуруст.`;
+ for(const key of Object.keys(stats)){
+   const p=pct(stats[key]),st=stateFor(p),node=$(nodeIds[key]);node.querySelector("circle").setAttribute("stroke",st.color);node.querySelector("circle").setAttribute("fill",p===null?"#162642":st.color+"22");node.querySelector(".pct").textContent=p===null?"Интизор":p+"%";node.querySelector(".pct").setAttribute("fill",st.color);node.querySelector("circle:nth-child(2)").setAttribute("stroke",st.color);node.querySelector("circle:nth-child(2)").setAttribute("stroke-dasharray",p===null?"3 5":"");
+ }
+ $("topicBars").innerHTML=Object.keys(stats).map(k=>{const p=pct(stats[k]);const st=stateFor(p);return `<div class="topic-row"><span>${topicNames[k]}</span><div class="bar"><i style="width:${p===null?0:p}%;background:${st.color}"></i></div><b>${p===null?"—":p+"%"}</b></div>`}).join("");
+ makeRecommendation();
+}
+function makeRecommendation(){
+ const done=Object.keys(stats).filter(k=>stats[k].seen>0);
+ if(!done.length){$("recTitle").textContent="Аввал тестро оғоз кун";$("recText").textContent="Пас аз чанд ҷавоб система мавзӯъеро, ки бештар ба такрор ниёз дорад, пешниҳод мекунад.";$("recTags").innerHTML='<span class="tag">Таҳлил интизор аст</span>';return}
+ const ranked=done.slice().sort((a,b)=>pct(stats[a])-pct(stats[b]));const weak=ranked[0],p=pct(stats[weak]);
+ let title,text;
+ if(p>=80){title="Профили хуб!";text="Мавзӯъҳои санҷидашудаат натиҷаи хуб доранд. Барои тасдиқи дониш саволҳои душвортар ё мавзӯъҳои навро санҷ."}
+ else if(p>=50){title="Такрори мақсаднок";text=`Ба мавзӯи «${topicNames[weak]}» каме вақти бештар ҷудо кун. Мавзӯъро такрор карда, баъд боз тестро гузар.`}
+ else{title="Аввал ин мавзӯъро мустаҳкам кун";text=`Дар ҷавобҳои ҳозира «${topicNames[weak]}» ба омӯзиши бештар ниёз дорад. Аввал таърифҳои асосиро хон, баъд саволҳои марбутро такрор кун.`}
+ $("recTitle").textContent=title;$("recText").textContent=text;
+ const tags=ranked.map(k=>`<span class="tag">${topicNames[k]} · ${pct(stats[k])}%</span>`);if(done.length<4)tags.push(`<span class="tag">${4-done.length} мавзӯъ ҳанӯз санҷида нашудааст</span>`);$("recTags").innerHTML=tags.join("");
+}
+function next(){
+ if(!locked)return;
+ if(index<questions.length-1){index++;renderQuestion();$("progressBar").style.width=(index/questions.length*100)+"%"}
+ else showResults();
+}
+function showResults(){
+ $("progressBar").style.width="100%";const score=Math.round(correct/questions.length*100);let msg=score>=80?"Натиҷаи олӣ! Харитаи ту нишон медиҳад, ки дар ин маҷмӯи саволҳо заминаи хуб дорӣ.":score>=50?"Натиҷаи миёна. Харита нишон медиҳад, ки бо такрори мақсаднок метавонӣ пешрафт кунӣ.":"Ин оғози хуб барои омӯзиш аст. Аз мавзӯъҳои бо фоизи паст оғоз кун.";
+ $("finalTitle").textContent=`Натиҷаи ту: ${correct} аз ${questions.length}`;
+ $("finalText").textContent=msg+" Ин натиҷа танҳо аз рӯйи 10 саволи ин намуна ҳисоб шудааст ва тамоми дониши туро пурра чен намекунад.";
+ $("finalSummary").innerHTML=`<div class="stats"><div class="stat"><strong>${score}%</strong><small>Ҷавобҳои дуруст</small></div><div class="stat"><strong>${questions.length-correct}</strong><small>Ҷавобҳои нодуруст</small></div><div class="stat"><strong>${Object.values(stats).filter(s=>pct(s)!==null&&pct(s)>=80).length}</strong><small>Мавзӯъҳои қавӣ</small></div></div>`;
+ $("resultModal").classList.add("show");
+}
+function reset(){index=0;answered=0;correct=0;locked=false;results=[];stats={html:{seen:0,correct:0},js:{seen:0,correct:0},algo:{seen:0,correct:0},cyber:{seen:0,correct:0}};$("resultModal").classList.remove("show");updateDashboard();renderQuestion();$("progressBar").style.width="0%";}
+$("nextBtn").addEventListener("click",next);$("resetBtn").addEventListener("click",reset);$("modalRestart").addEventListener("click",reset);$("closeModal").addEventListener("click",()=>$("resultModal").classList.remove("show"));
+updateDashboard();renderQuestion();
+</script>
+</body>
+</html>
